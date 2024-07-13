@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn,UpdateDateColumn } from "typeorm";
+import { Task } from "src/tasks/models/task.entity";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn,UpdateDateColumn, OneToMany } from "typeorm";
 
 @Entity('users')
 export class User {
@@ -17,6 +18,9 @@ export class User {
 
     @Column({default: true})
     isActive: boolean;
+
+    @OneToMany((_type) => Task, task => task.user, {eager: true}) // eager true means that when we fetch a user, we also fetch the tasks associated with that user
+    tasks: Task[];
 
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP(6)'})
     createdAt: Date;
