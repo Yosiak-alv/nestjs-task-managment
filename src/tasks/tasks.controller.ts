@@ -5,9 +5,9 @@ import { Task } from './models/task.entity';
 import { UpdateStatusTaskDto } from './dto/update-task.dto';
 import { GetTaskFilterDto } from './dto/get-task-filter.dto';
 import { AuthGuard } from '@nestjs/passport';
-import { GetUser } from 'src/auth/decorators/get-user.decorators';
-import { User } from 'src/auth/models/user.entity';
-import { ApiResponse } from 'src/common/interfaces/api-response.interface';
+import { GetUser } from '../auth/decorators/get-user.decorators';
+import { User } from '../auth/models/user.entity';
+import { ApiResponse } from '../common/interfaces/api-response.interface';
 
 @Controller('tasks')
 @UseGuards(AuthGuard()) // This will protect all the routes in this controller

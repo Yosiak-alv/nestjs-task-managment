@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsString, IsEmail, MinLength,Matches, Min } from "class-validator";
-import { Match } from "src/common/custom-decorators-validations/match.decorator";
-import { IsUnique } from "src/common/custom-decorators-validations/unique.decorator";
+import { Match } from "../../common/custom-decorators-validations/match.decorator";
+import { IsUnique } from "../../common/custom-decorators-validations/unique.decorator";
 
 export class RegistrationDto {
     

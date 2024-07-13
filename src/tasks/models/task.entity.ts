@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, BaseEntity, ManyToMany, ManyToOne } from "typeorm";
 import { TaskStatus } from "../types/task-statuses.enum";
-import { User } from "src/auth/models/user.entity";
+import { User } from "../../auth/models/user.entity";
 import { Exclude } from "class-transformer";
 
 //Other Approach Active Record Pattern
