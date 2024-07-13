@@ -4,7 +4,7 @@ import { User } from './models/user.entity';
 import { Repository } from 'typeorm';
 import {RegistrationDto, AuthenticationDto, UserResponseDto} from './dto/index';
 
-import { hashPassword, comparePassword } from 'src/common/hashing';
+import { hashPassword, comparePassword } from 'src/common/bcrypt';
 
 import { JwtService } from '@nestjs/jwt';
 import { LoginResponse } from './interfaces/login-response.interface';
